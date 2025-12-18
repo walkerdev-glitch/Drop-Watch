@@ -1,0 +1,6 @@
+# Ignore local environment variables
+.env.local
+
+# Ignore Node modules and build output
+node_modules/
+.next/
