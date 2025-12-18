@@ -2,7 +2,7 @@
   "name": "drop-watch",
   "version": "1.2.0",
   "private": true,
-  "engines": { "node": "18.x" },
+  "engines": { "node": "24.x" },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
