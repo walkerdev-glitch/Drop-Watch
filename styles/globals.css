@@ -1,0 +1,29 @@
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0b0e14;
+  color: #e5e7eb;
+}
+a { color: #60a5fa; text-decoration: none; }
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: white;
+}
+.card {
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 16px;
+}
