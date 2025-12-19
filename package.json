@@ -15,7 +15,7 @@
     "wagmi": "^2.6.0",
     "viem": "^2.9.0",
     "@rainbow-me/rainbowkit": "^2.0.3",
-    "@alch/alchemy-sdk": "^2.8.3",
+    "alchemy-sdk": "^3.0.0",
     "@upstash/redis": "^1.34.0",
     "@sentry/nextjs": "^8.0.0"
   }
