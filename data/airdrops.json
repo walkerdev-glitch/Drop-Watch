@@ -1,1 +1,59 @@
-[]
+[
+  {
+    "id": "arb",
+    "name": "Arbitrum",
+    "contracts": [
+      "0x72ce9c846789fdb6fC1f34aC4AD25Dd9ef7031ef",
+      "0x011b6E24FfB0B5f5fCc564cf4183C5BBBc96D515"
+    ],
+    "claimUrl": "https://arbitrum.foundation"
+  },
+  {
+    "id": "op",
+    "name": "Optimism",
+    "contracts": [
+      "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed"
+    ],
+    "claimUrl": "https://www.optimism.io"
+  },
+  {
+    "id": "zksync",
+    "name": "zkSync",
+    "contracts": [
+      "0x32400084C286CF3E17e7B677ea9583e60a000324"
+    ],
+    "claimUrl": "https://zksync.io"
+  },
+  {
+    "id": "starknet",
+    "name": "Starknet",
+    "contracts": [
+      "0xae0Ee0A63A2cE6BaeEFFE56e7714FB4EFE48D419"
+    ],
+    "claimUrl": "https://starknet.io"
+  },
+  {
+    "id": "base",
+    "name": "Base",
+    "contracts": [
+      "0x3154Cf16ccdb4C6d922629664174b904d80F2C35"
+    ],
+    "claimUrl": "https://base.org"
+  },
+  {
+    "id": "layerzero",
+    "name": "LayerZero",
+    "contracts": [
+      "0x8731d54E9D02c286767d56ac03e8037C07e01e98"
+    ],
+    "claimUrl": "https://layerzero.network"
+  },
+  {
+    "id": "scroll",
+    "name": "Scroll",
+    "contracts": [
+      "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367"
+    ],
+    "claimUrl": "https://scroll.io"
+  }
+]

@@ -1,0 +1,17 @@
+import { Redis } from '@upstash/redis'
+import { isAddress } from 'viem'
+
+const redis = Redis.fromEnv()
+
+export default async function handler(req, res) {
+  try {
+    const { address, userId } = req.body
+    if (!isAddress(address)) return res.status(400).json({ error: 'Invalid address' })
+    
+    // Save the wallet for this user
+    await redis.sadd(`user:${userId}:wallets`, address.toLowerCase())
+    res.json({ success: true, message: 'Wallet saved' })
+  } catch {
+    res.status(500).json({ error: 'Could not save wallet' })
+  }
+}
