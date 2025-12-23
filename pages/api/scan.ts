@@ -1,5 +1,6 @@
 import { isAddress } from 'viem'
 import { Alchemy, Network } from 'alchemy-sdk'
+import type { AssetTransfersCategory } from 'alchemy-sdk'
 import AIRDROPS from '../../data/airdrops.json'
 
 const alchemy = new Alchemy({
@@ -10,14 +11,17 @@ const alchemy = new Alchemy({
 export default async function handler(req, res) {
   const { address } = req.query
 
-  if (!isAddress(address)) {
+  if (!isAddress(address as string)) {
     return res.status(400).json({ error: 'Invalid address' })
   }
 
   try {
+    // Typed categories
+    const categories: AssetTransfersCategory[] = ['external', 'erc20', 'erc721']
+
     const txs = await alchemy.core.getAssetTransfers({
-      fromAddress: address,
-      category: ['external', 'erc20', 'erc721'],
+      fromAddress: address as string,
+      category: categories,
       maxCount: 1000,
     })
 
@@ -34,7 +38,7 @@ export default async function handler(req, res) {
       claimUrl: d.claimUrl,
     }))
 
-    return res.json({ address, results })
+    return res.status(200).json({ address, results })
   } catch (error) {
     console.error('Alchemy failure:', error)
     return res.status(500).json({ error: 'Alchemy request failed' })
