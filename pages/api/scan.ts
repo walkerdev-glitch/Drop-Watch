@@ -16,8 +16,12 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Typed categories
-    const categories: AssetTransfersCategory[] = ['external', 'erc20', 'erc721']
+    // ✅ Typed categories with assertion
+    const categories: AssetTransfersCategory[] = [
+      'external' as AssetTransfersCategory,
+      'erc20' as AssetTransfersCategory,
+      'erc721' as AssetTransfersCategory,
+    ]
 
     const txs = await alchemy.core.getAssetTransfers({
       fromAddress: address as string,
